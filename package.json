@@ -1,0 +1,56 @@
+{
+  "name": "express-humps",
+  "version": "0.1.0",
+  "description": "A middleware which can camelize the request body and decamelize the response through json method.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile": "babel ./src -d ./dist --ignore test.js",
+    "dev": "npm test -- -w",
+    "prepublish": "npm run clean && npm run compile",
+    "release": "standard-version && git push --follow-tags origin master",
+    "start": "npm run dev",
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill ./src/**/*.test.js",
+    "test:single": "mocha --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zzswang/express-humps.git"
+  },
+  "author": "zzswang <zzswang@gmail.com>",
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/zzswang/express-humps/issues"
+  },
+  "homepage": "https://github.com/zzswang/express-humps",
+  "keywords": [
+    "humps",
+    "express",
+    "camelizedKeys"
+  ],
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "6.23.0",
+    "babel-core": "6.23.1",
+    "babel-polyfill": "6.23.0",
+    "babel-preset-es2015": "6.22.0",
+    "babel-preset-stage-0": "6.22.0",
+    "chai": "3.5.0",
+    "mocha": "3.2.0",
+    "standard-version": "4.0.0"
+  },
+  "dependencies": {
+    "humps": "2.0.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "1.0.17"
+  }
+}
