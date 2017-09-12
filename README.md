@@ -1,6 +1,10 @@
 # express-humps
 
+[![Build Status](https://travis-ci.org/zzswang/express-humps.svg?branch=master)](https://travis-ci.org/zzswang/express-humps)
+
+
 This express middleware is born for prettifing request and reponse json.
+
 Each key from request body and query will change format to camelcase.
 And send response back with snakecase.
 
